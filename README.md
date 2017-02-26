@@ -1,7 +1,7 @@
-﻿Spacialgaze Server @ Pokémon Showdown
+﻿Ataraxia Server @ Pokémon Showdown
 ========================================================================
 
-Navigation: [Spacialgaze][1] | [PS Server repository][10] | [PS Client repository][2] | [PS Dex repository][3]
+Navigation: [Ataraxia][1] | [PS Server repository][10] | [PS Client repository][2] | [PS Dex repository][3]
 
   [1]: http://ataraxia.psim.us/
   [2]: https://github.com/Zarel/Pokemon-Showdown-Client
