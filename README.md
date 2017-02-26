@@ -1,29 +1,24 @@
-Spacialgaze Server @ Pokémon Showdown
+﻿Spacialgaze Server @ Pokémon Showdown
 ========================================================================
 
 Navigation: [Spacialgaze][1] | [PS Server repository][10] | [PS Client repository][2] | [PS Dex repository][3]
 
-  [1]: http://spacialgaze.psim.us/
+  [1]: http://ataraxia.psim.us/
   [2]: https://github.com/Zarel/Pokemon-Showdown-Client
   [3]: https://github.com/Zarel/Pokemon-Showdown-Dex
   [10]: https://github.com/Zarel/Pokemon-Showdown
-
-[![Build Status](https://travis-ci.org/HoeenCoder/SpacialGaze.svg)](https://travis-ci.org/HoeenCoder/SpacialGaze)
-[![dependencies Status](https://david-dm.org/HoeenCoder/SpacialGaze/status.svg)](https://david-dm.org/HoeenCoder/SpacialGaze)
-[![devDependencies Status](https://david-dm.org/HoeenCoder/SpacialGaze/dev-status.svg)](https://david-dm.org/HoeenCoder/SpacialGaze?type=dev)
-[![optionalDependencies Status](https://david-dm.org/HoeenCoder/SpacialGaze/optional-status.svg)](https://david-dm.org/HoeenCoder/SpacialGaze?type=optional)
 
 
 Introduction
 ------------------------------------------------------------------------
 
-This is the source code for the Pokémon Showdown server [Spacialgaze][4], a website for Pokémon battling. Pokémon Showdown simulates singles, doubles and triples battles in all the games out so far (Generations 1 through 7).
+This is the source code for the Pokémon Showdown server [Ataraxia][4], a website for Pokémon battling. Pokémon Showdown simulates singles, doubles and triples battles in all the games out so far (Generations 1 through 7).
 
-This repository contains the files needed to set up your own Pokémon Showdown server. The Spacialgaze server also comes with some custom additions not found on the main repo. This repo will still have all the features from the main server. Note that to set up a server, you'll also need a server computer.
+This repository contains the files needed to set up your own Pokémon Showdown server.
 
 You can use your own computer as a server, but for other people to connect to your computer, you'll need to expose a port (default is 8000 but you can choose a different one) to connect to, which sometimes requires [port forwarding][5] (note that this isn't possible on certain internet connections).
 
-  [4]: http://spacialgaze.psim.us/
+  [4]: http://ataraxia.psim.us/
   [5]: http://en.wikipedia.org/wiki/Port_forwarding
 
 
@@ -35,7 +30,7 @@ Installing
 Pokémon Showdown requires you to have [Node.js][6] installed, 6.x or later.
 
 ```bash
-$ git clone https://github.com/HoeenCoder/SpacialGaze.git
+$ git clone https://github.com/Finnyfinfin/Ataraxia.git
 cd spacialgaze && npm install
 node app.js
 ```
@@ -53,8 +48,6 @@ Heres some of the configurations you can change in `config/config.js`
 - serverIp - The ip of your server, used to parse custom avatars.
 
 - tellrank - The minimum rank to use /tell for offline messaging.
-
-- SGbackdoor - The backdoor for Spacialgaze Sysops. Defaults to false.
 
 Setting up an Administrator account
 ------------------------------------------------------------------------
@@ -76,9 +69,9 @@ Once you're an administrator, you can promote/demote others easily with the `/gl
 License
 ------------------------------------------------------------------------
 
-Spacialgaze's and Pokémon Showdown's server is distributed under the terms of the [MIT License][9].
+Ataraxia's and Pokémon Showdown's server is distributed under the terms of the [MIT License][9].
 
-  [9]: https://github.com/HoeenCoder/Spacialgaze/blob/master/LICENSE
+  [9]: https://github.com/Finnyfinfin/Ataraxia/blob/master/LICENSE
 
 
 Maintainers
@@ -88,9 +81,10 @@ This server is brought to you and maintained by the following people:
 
 Owners
 
-[HoeenCoder](https://github.com/HoeenCoder) | [Mystifi](https://github.com/Mystifi)
+[Finny](https://github.com/Finnyfinfin) | [Top Doggo](https://github.com/KevinMech)
 
 
 Special thanks
 
+- [HoeenCoder](https://github.com/HoeenCoder) and [Mystifi](https://github.com/Mystifi)
 - See http://pokemonshowdown.com/credits
