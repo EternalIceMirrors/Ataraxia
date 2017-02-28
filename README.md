@@ -79,9 +79,13 @@ Maintainers
 
 This server is brought to you and maintained by the following people:
 
-Owners
+Owner
 
-[Finny](https://github.com/Finnyfinfin) | [Top Doggo](https://github.com/KevinMech)
+[Finny](https://github.com/Finnyfinfin)
+
+Contributor
+
+[Top Doggo](https://github.com/KevinMech)
 
 
 Special thanks

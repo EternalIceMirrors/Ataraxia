@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 const fs = require('fs');
 
@@ -6,8 +6,8 @@ const fs = require('fs');
 // Ideally, this should be zero.
 const DEFAULT_AMOUNT = 0;
 
-global.currencyName = 'Stardust';
-global.currencyPlural = 'Stardust';
+global.currencyName = 'Pupper';
+global.currencyPlural = 'Puppers';
 
 let Economy = global.Economy = {
 	/**
@@ -90,8 +90,8 @@ exports.commands = {
 		});
 	},
 
-	gs: 'givecurrency', //You can change "gs" and "givestardust" to your currency name for an alias that applies to your currency Example: AwesomeBucks could be "ga" and "giveawesomebucks"
-	givestardust: 'givecurrency',
+	gp: 'givecurrency', //You can change "gp" and "givepupper" to your currency name for an alias that applies to your currency Example: AwesomeBucks could be "ga" and "giveawesomebucks"
+	givepupper: 'givecurrency',
 	gc:'givecurrency',
 	givecurrency: function (target, room, user, connection, cmd) {
 		if (!this.can('forcewin')) return false;
@@ -125,8 +125,8 @@ exports.commands = {
 		});
 	},
 
-	ts: 'takecurrency', //You can change "ts" and "takestardust" to your currency name for an alias that applies to your currency Example: AwesomeBucks could be "ta" and "takeawesomebucks"
-	takestardust: 'takecurrency',
+	tp: 'takecurrency', //You can change "tp" and "takepupper" to your currency name for an alias that applies to your currency Example: AwesomeBucks could be "ta" and "takeawesomebucks"
+	takepupper: 'takecurrency',
 	tc:'takecurrency',
 	takecurrency: function (target, room, user, connection, cmd) {
 		if (!this.can('forcewin')) return false;
@@ -136,7 +136,7 @@ exports.commands = {
 		for (let u in splitTarget) splitTarget[u] = splitTarget[u].trim();
 
 		let targetUser = splitTarget[0];
-		if (toId(targetUser) === user.userid) return this.errorReply("You cannot transfer stardust to yourself.");
+		if (toId(targetUser) === user.userid) return this.errorReply("You cannot transfer puppers to yourself.");
 		if (toId(targetUser).length < 1) return this.sendReply("/" + cmd + " - [user] may not be blank.");
 		if (toId(targetUser).length > 19) return this.sendReply("/" + cmd + " - [user] can't be longer than 19 characters");
 
@@ -161,8 +161,8 @@ exports.commands = {
 		});
 	},
 
-	confirmtransferstardust: 'transfercurrency', //You can change "transferstardust" and "confirmtransferstardust" to your currency name for an alias that applies to your currency Example: AwesomeBucks could be "transferawesomebucks" and "confirmtransferawesomebucks"
-	transferstardust: 'transfercurrency',
+	confirmtransferpupper: 'transfercurrency', //You can change "transferpuppert" and "confirmtransferpupper" to your currency name for an alias that applies to your currency Example: AwesomeBucks could be "transferawesomebucks" and "confirmtransferawesomebucks"
+	transferpupper: 'transfercurrency',
 	confirmtransfercurrency: 'transfercurrency',
 	transfercurrency: function (target, room, user, connection, cmd) {
 		if (!target) return this.sendReply("Usage: /" + cmd + " [user], [amount]");
@@ -180,7 +180,7 @@ exports.commands = {
 		if (amount < 1) return this.sendReply("/" + cmd + " - You can't transfer less than one " + currencyName + ".");
 		Economy.readMoney(user.userid, money => {
 			if (money < amount) return this.sendReply("/" + cmd + " - You can't transfer more " + currencyName + " than you have.");
-			if (cmd !== 'confirmtransfercurrency' && cmd !== 'confirmtransferstardust') {
+			if (cmd !== 'confirmtransfercurrency' && cmd !== 'confirmtransferpupper') {
 				return this.popupReply('|html|<center>' +
 					'<button class = "card-td button" name = "send" value = "/confirmtransfercurrency ' + toId(targetUser) + ', ' + amount + '"' +
 					'style = "outline: none; width: 200px; font-size: 11pt; padding: 10px; border-radius: 14px ; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4) inset; transition: all 0.2s;">' +

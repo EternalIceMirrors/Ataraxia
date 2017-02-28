@@ -9,7 +9,7 @@
 'use strict';
 
 const fs = require('fs');
-let allowThisShop = false; //Change to true to make these command work
+let allowThisShop = true; //Change to true to make these command work
 let writeJSON = true;
 SG.eShop = {};
 
@@ -100,7 +100,7 @@ try {
 }
 
 exports.commands = {
-	//shop: 'eshop', //Uncomment this if you want this to be able to be used using the /shop command
+	//shop: 'eshop',
 	eshop: {
 		add: function (target, room, user, connection, cmd, message) {
 			if (!this.can('roomowner')) return false;

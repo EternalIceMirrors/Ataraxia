@@ -397,10 +397,6 @@ exports.commands = {
 	eating: 'away',
 	sleep: 'away',
 	sleeping: 'away',
-	gaming: 'away',
-	nerd: 'away',
-	nerding: 'away',
-	mimis: 'away',
 	away: function (target, room, user, connection, cmd) {
 		if (!user.isAway && user.name.length > 19 && !user.can('lock')) return this.sendReply("Your username is too long for any kind of use of this command.");
 		if (!this.canTalk()) return false;

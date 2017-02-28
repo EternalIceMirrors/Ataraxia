@@ -6,7 +6,7 @@ exports.commands = {
 		if (!this.can('roomowner')) return false;
 		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to speak.");
 		return this.sendReplyBox(
-			'<b><u><font color="#008ae6">SpacialGaze\'s Leader Commands:</u></b></font><br /><br />' +
+			'<b><u><font color="#008ae6">Ataraxia\'s Leader Commands:</u></b></font><br /><br />' +
 			'<font size = 1><b>/lockip [IP]</b> - locks a particular IP address from the server. Exisiting users on the IP will not be locked. <br />' +
 			'<b>/banip [IP] OR /unbanip</b> - bans a particular IP address from the server. Exisiting users on the IP will not be banned. <br />' +
 			'<b>/globalvoice [username] OR /globaldevoice</b> - promotes/demotes a user to or from Global Voice <br />' +
@@ -14,7 +14,7 @@ exports.commands = {
 			'<b>/globalmod [username] OR /globaldemod</b> - promotes/demotes a user to or from Global Moderator <br />' +
 			'<b>/globaldeauth [username]</b> - demotes a user to Regular user <br />' +
 			'<b>/unbanall</b> - unbans all IP addresses <br />' +
-			'<b>/declare [message] or /greendeclare [message] or /reddeclare [message]</b> - Anonymously announces a message in a room in the color specified in the command (/decalre = blue) <br />' +
+			'<b>/declare [message] or /greendeclare [message] or /reddeclare [message]</b> - Anonymously announces a message in a room in the color specified in the command (/declare = blue) <br />' +
 			'<b>/forcetie or /forcewin [username]</b> - forces the game to end in a Tie or let a user win a battle <br />' +
 			'<b>/modchat [off/autoconfirmed/+/%/@/&/#/~]</b> - allows modchat to be set to ANY level <br />' +
 			'<b>/roomintro [html code]</b> - creates a Room Intro for that particular room <br />' +
@@ -49,8 +49,8 @@ exports.commands = {
 			'<b>/roomlist</b> - displays the list of public/private/official/battle rooms and the total amount of users connected on the server<br />' +
 			'<b>/hide [rank]</b> - Hides user\'s global rank to specified rank. [none/+/%/@/&]<br />' +
 			'<b>/show</b> - Displays your global rank <br />' +
-			'<b>/givecurrency [user], [amount]</b> - gives a special amount of Stardust to a user (needs a reason) <br />' +
-			'<b>/takecurrency [user], [amount]</b> - removes a special amount of Stardust from a user (needs a reason) <br />' +
+			'<b>/givecurrency [user], [amount]</b> - gives a special amount of puppers to a user (needs a reason) <br />' +
+			'<b>/takecurrency [user], [amount]</b> - removes a special amount of puppers from a user (needs a reason) <br />' +
 			'<b>/moneylog [number]</b> - to view the last x lines <br />' +
 			'<b>/moneylog [text]</b> - to search for text <br />' +
 			'<b>/pmall [message]</b> - sends a pm to all users connected to SG <br />' +

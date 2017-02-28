@@ -13,7 +13,7 @@ SG.nameColor = function (name, bold, userGroup) {
 // usage: SG.nameColor(user.name, true) for bold OR SG.nameColor(user.name, false) for non-bolded.
 
 SG.messageSeniorStaff = function (message, pmName, from) {
-	pmName = (pmName ? pmName : '~SG Server');
+	pmName = (pmName ? pmName : '~Ataraxia Server');
 	from = (from ? ' (PM from ' + from + ')' : '');
 	Users.users.forEach(curUser => {
 		if (curUser.group === '~' || curUser.group === '&') {
@@ -81,7 +81,7 @@ SG.randomString = function (length) {
 };
 
 SG.reloadCSS = function () {
-	const cssPath = 'spacialgaze'; // This should be the server id if Config.serverid doesn't exist. Ex: 'serverid'
+	const cssPath = 'ataraxia'; // This should be the server id if Config.serverid doesn't exist. Ex: 'serverid'
 	let options = {
 		host: 'play.pokemonshowdown.com',
 		port: 80,
@@ -104,7 +104,7 @@ SG.giveDailyReward = function (userid, user) {
 	if ((Date.now() - lastTime) >= 127800000) Db.DailyBonus.set(userid, [1, Date.now()]);
 	if (Db.DailyBonus.get(userid)[0] === 8) Db.DailyBonus.set(userid, [7, Date.now()]);
 	Economy.writeMoney(userid, Db.DailyBonus.get(userid)[0]);
-	user.send('|popup||wide||html| <center><u><b><font size="3">SpacialGaze Daily Bonus</font></b></u><br>You have been awarded ' + Db.DailyBonus.get(userid)[0] + ' Stardust.<br>' + showDailyRewardAni(userid) + '<br>Because you have connected to the server for the past ' + Db.DailyBonus.get(userid)[0] + ' Days.</center>');
+	user.send('|popup||wide||html| <center><u><b><font size="3">Ataraxia Daily Bonus</font></b></u><br>You have been awarded ' + Db.DailyBonus.get(userid)[0] + ' Stardust.<br>' + showDailyRewardAni(userid) + '<br>Because you have connected to the server for the past ' + Db.DailyBonus.get(userid)[0] + ' Days.</center>');
 	Db.DailyBonus.set(userid, [(Db.DailyBonus.get(userid)[0] + 1), Date.now()]);
 };
 
