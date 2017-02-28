@@ -140,7 +140,7 @@ exports.commands = {
 		let popup = "|html|" + "<font size=5 color=#32CD32><u><b>Ataraxia Credits</b></u></font><br />" +
 			"<br />" +
 			"<u><b>Server Maintainers:</u></b><br />" +
-			"- " + SG.nameColor('Finny', true) + " (Owner, Sysadmin, Development, Policies, Dictatorship)<br />" +
+			"- " + SG.nameColor('Finny', true) + " (Owner, Sysadmin, Development, Policies, Host, Dictatorship)<br />" +
 			"- " + SG.nameColor('Top Doggo', true) + " (Owner, Sysadmin, Development)<br />" +
 			"<br />" +
 			"<u><b>Major Contributors:</b></u><br />" +
@@ -261,14 +261,11 @@ exports.commands = {
 		return this.sendReplyBox('There ' + (names.length === 1 ? 'is' : 'are') + ' <font color="#24678d"><b>' + names.length + '</b></font> ' + (names.length === 1 ? 'user' : 'users') + ' with the rank <font color="#24678d"><b>' + Config.groups[target].name + '</b></font> currently online.<br />' + names.join(', '));
 	},
 
-	sg: 'spacialgazerepo',
-	sgr: 'spacialgazerepo',
-	repo: 'spacialgazerepo',
-	spacialgazerepo: function (target, room, user) {
+	repo: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReply("|raw|<a href='https://github.com/HoeenCoder/SpacialGaze'>SpacialGaze\'s repo</a>");
+		this.sendReply("|raw|<a href='https://github.com/Finnyfinfin/Ataraxia'>Ataraxia\'s repo</a>");
 	},
-	spacialgazerepohelp: ["/spacialgazerepo - Links to the SpacialGaze repository on Github."],
+	spacialgazerepohelp: ["/spacialgazerepo - Links to the Ataraxia repository on Github."],
 
 	seen: function (target, room, user) {
 		if (!this.runBroadcast()) return;
